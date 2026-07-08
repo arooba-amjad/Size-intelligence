@@ -15,7 +15,7 @@ const FeatureCard = ({
     <div className="relative bg-white rounded-3xl border border-gray-200 shadow-md p-8 h-full transition-all duration-300 hover:-translate-y-2 hover:shadow-xl overflow-hidden">
 
       {/* Top Left */}
-      <div className="absolute top-0 left-0 w-16 h-16 border-t-[6px] border-l-[6px] border-[#36536B] rounded-tl-3xl"></div>
+      {/* <div className="absolute top-0 left-0 w-16 h-16 border-t-[6px] border-l-[6px] border-[#36536B] rounded-tl-3xl"></div> */}
 
       {/* Top Right */}
       <div className="absolute top-0 right-0 w-16 h-16 border-t-[6px] border-r-[6px] border-[#36536B] rounded-tr-3xl"></div>
@@ -24,7 +24,7 @@ const FeatureCard = ({
       <div className="absolute bottom-0 left-0 w-16 h-16 border-b-[6px] border-l-[6px] border-[#36536B] rounded-bl-3xl"></div>
 
       {/* Bottom Right */}
-      <div className="absolute bottom-0 right-0 w-16 h-16 border-b-[6px] border-r-[6px] border-[#36536B] rounded-br-3xl"></div>
+      {/* <div className="absolute bottom-0 right-0 w-16 h-16 border-b-[6px] border-r-[6px] border-[#36536B] rounded-br-3xl"></div> */}
 
       {/* Icon */}
 

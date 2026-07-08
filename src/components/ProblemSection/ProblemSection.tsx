@@ -23,6 +23,7 @@ const stats = [
       "conversion lift when shoppers trust size recommendations",
   },
 ];
+
 const features = [
   {
     icon: FaBrain,
@@ -46,44 +47,60 @@ const features = [
 
 const ProblemSection = () => {
   return (
-    <section className="py-20 bg-white">
+    <section>
 
-      <div className="max-w-[1220px] mx-auto px-6">
+      {/* ================= Statistics Section ================= */}
 
-        <h2 className="text-5xl font-bold text-center text-[#36536B]">
-          The sizing problem costs billions
-        </h2>
+      <div className="bg-white py-20">
 
-        {/* Stats */}
+        <div className="max-w-[1220px] mx-auto px-6">
 
-        <div className="grid md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-gray-300 mt-16">
+          <h2 className="text-5xl font-bold text-center text-[#36536B]">
+            The sizing problem costs billions
+          </h2>
+
+          <div className="grid md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-gray-300 mt-16">
 
             {stats.map((item) => (
-                <div
+              <div
                 key={item.value}
                 className="py-8 md:px-8"
-                >
+              >
                 <StatCard
-                    value={item.value}
-                    description={item.description}
+                  value={item.value}
+                  description={item.description}
                 />
-                </div>
+              </div>
             ))}
+
+          </div>
 
         </div>
 
-        {/* Features */}
+      </div>
 
-        <div className="grid md:grid-cols-3 gap-8 mt-16">
+      {/* ================= Features Section ================= */}
 
-          {features.map((item) => (
-           <FeatureCard
+      <div className="bg-[#F7F8FA] py-20">
+
+        <div className="max-w-[1220px] mx-auto px-6">
+
+          <h2 className="text-5xl font-bold text-center text-[#36536B]">
+            One API. Intelligent sizing.
+          </h2>
+
+          <div className="grid md:grid-cols-3 gap-8 mt-16">
+
+            {features.map((item) => (
+              <FeatureCard
                 key={item.title}
                 icon={item.icon}
                 title={item.title}
                 description={item.description}
-            />
-          ))}
+              />
+            ))}
+
+          </div>
 
         </div>
 
