@@ -1,26 +1,25 @@
 import StatCard from "./StatCard";
 import FeatureCard from "./FeatureCard";
-import {
-  FaBrain,
-  FaPlug,
-  FaChartLine,
-} from "react-icons/fa6";
+import { FaBrain, FaPlug, FaChartLine } from "react-icons/fa6";
+import { FiRotateCcw, FiUsers } from "react-icons/fi";
+import { BiDollarCircle } from "react-icons/bi";
 
 const stats = [
   {
+    icon: FiRotateCcw,
     value: "30%",
     description:
       "of online fashion orders are returned—mostly due to wrong size",
   },
   {
+    icon: BiDollarCircle,
     value: "$550B",
-    description:
-      "annual cost of ecommerce returns globally",
+    description: "annual cost of ecommerce returns globally",
   },
   {
+    icon: FiUsers,
     value: "2×",
-    description:
-      "conversion lift when shoppers trust size recommendations",
+    description: "conversion lift when shoppers trust size recommendations",
   },
 ];
 
@@ -48,49 +47,35 @@ const features = [
 const ProblemSection = () => {
   return (
     <section>
-
       {/* ================= Statistics Section ================= */}
-
       <div className="bg-white py-20">
-
         <div className="max-w-[1220px] mx-auto px-6">
-
           <h2 className="text-5xl font-bold text-center text-[#36536B]">
             The sizing problem costs billions
           </h2>
 
           <div className="grid md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-gray-300 mt-16">
-
             {stats.map((item) => (
-              <div
-                key={item.value}
-                className="py-8 md:px-8"
-              >
+              <div key={item.value} className="py-8 md:px-8">
                 <StatCard
+                  icon={item.icon}
                   value={item.value}
                   description={item.description}
                 />
               </div>
             ))}
-
           </div>
-
         </div>
-
       </div>
 
       {/* ================= Features Section ================= */}
-
       <div className="bg-[#F7F8FA] py-20">
-
         <div className="max-w-[1220px] mx-auto px-6">
-
           <h2 className="text-5xl font-bold text-center text-[#36536B]">
             One API. Intelligent sizing.
           </h2>
 
           <div className="grid md:grid-cols-3 gap-8 mt-16">
-
             {features.map((item) => (
               <FeatureCard
                 key={item.title}
@@ -99,13 +84,9 @@ const ProblemSection = () => {
                 description={item.description}
               />
             ))}
-
           </div>
-
         </div>
-
       </div>
-
     </section>
   );
 };

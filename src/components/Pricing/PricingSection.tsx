@@ -1,3 +1,4 @@
+import CallToAction from "./CallToAction";
 import PricingCard from "./PricingCard";
 
 const plans = [
@@ -49,7 +50,7 @@ const plans = [
 
 const PricingSection = () => {
   return (
-    <section className="py-24 bg-white">
+    <section className="py-15 bg-white">
 
       <div className="max-w-[1220px] mx-auto px-6">
 
@@ -71,6 +72,9 @@ const PricingSection = () => {
             />
           ))}
 
+        </div>
+        <div>
+          <CallToAction />
         </div>
 
       </div>

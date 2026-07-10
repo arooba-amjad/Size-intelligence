@@ -1,90 +1,125 @@
-import ProgressBar from "./ProgressBar";
-import InfoCard from "./InfoCard";
+import shirtImage from "../../assets/tshirt.png";
+import { FaWeightHanging, FaArrowUp } from "react-icons/fa6";
+import { FiUser, FiTag } from "react-icons/fi";
 
 const DashboardCard = () => {
   return (
-    <div className="bg-[#204B64] rounded-[32px] border border-[#2C617C] shadow-2xl p-6 w-full max-w-[540px] text-white">
-
-      {/* Top */}
-
-      <div className="grid grid-cols-2 gap-6">
-
-        {/* Left */}
-
-        <div>
-
-          <p className="text-sm text-gray-300">
+    <div className="bg-[#1C3A4D] rounded-[28px] border border-white/5 shadow-2xl p-6 w-full max-w-[540px] text-white font-sans relative overflow-hidden">
+      
+      {/* Top Section */}
+      <div className="flex justify-between relative z-10">
+        
+        {/* Left Content */}
+        <div className="flex flex-col w-[55%]">
+          <p className="text-sm text-[#87A8BB] font-medium tracking-wide">
             Recommended Size
           </p>
-
-          <h2 className="text-[72px] font-bold text-[#69E4E8] leading-none mt-2">
+          <h2 className="text-[84px] font-bold text-[#62E0D1] leading-[0.95] mt-1 tracking-tight drop-shadow-lg">
             M
           </h2>
 
-          <p className="mt-6 text-gray-300">
-            Confidence Score
-          </p>
-
-          <h3 className="text-[42px] font-bold text-[#42E0C8]">
-            98%
-          </h3>
-
-          <div className="mt-3">
-            <ProgressBar percentage={98} />
+          <div className="mt-8">
+            <p className="text-sm text-[#87A8BB] font-medium tracking-wide">
+              Confidence Score
+            </p>
+            <h3 className="text-[34px] font-bold text-[#42E0C8] leading-tight mt-0.5">
+              98%
+            </h3>
+            
+            {/* Custom Progress Bar */}
+            <div className="mt-3 w-[90%] h-2.5 bg-[#122A3A] rounded-full overflow-hidden shadow-inner">
+              <div className="h-full bg-[#42E0C8] rounded-full w-[98%] shadow-[0_0_10px_#42E0C8]"></div>
+            </div>
           </div>
-
         </div>
 
-        {/* Shirt */}
-
-        <div className="flex items-center justify-center">
-
-          <div className="w-48 h-48 rounded-full bg-cyan-500/10 border border-cyan-400 flex items-center justify-center">
-
-            <span className="text-cyan-300">
-              Product Image
-            </span>
-
-          </div>
-
+        {/* Right Content - Shirt Image */}
+        <div className="absolute -top-4 -right-4 w-[55%] h-[130%] flex justify-end z-0 pointer-events-none">
+          <img 
+            src={shirtImage} 
+            alt="Product Wireframe" 
+            className="w-full h-auto object-contain drop-shadow-2xl mix-blend-screen"
+          />
         </div>
 
       </div>
 
       {/* Info Cards */}
+      <div className="grid grid-cols-3 gap-3 mt-8 relative z-10">
+        
+        <div className="bg-[#24455A]/80 border border-white/5 rounded-2xl p-3.5 flex items-center gap-3 backdrop-blur-md">
+          <FiUser className="text-[#62E0D1] text-2xl" strokeWidth={1.5} />
+          <div className="flex flex-col">
+            <p className="text-[11px] text-[#87A8BB] font-medium">Height</p>
+            <p className="text-[15px] font-bold tracking-wide mt-0.5">175 cm</p>
+          </div>
+        </div>
 
-      <div className="grid grid-cols-3 gap-3 mt-6">
+        <div className="bg-[#24455A]/80 border border-white/5 rounded-2xl p-3.5 flex items-center gap-3 backdrop-blur-md">
+          <FaWeightHanging className="text-[#62E0D1] text-[20px]" />
+          <div className="flex flex-col">
+            <p className="text-[11px] text-[#87A8BB] font-medium">Weight</p>
+            <p className="text-[15px] font-bold tracking-wide mt-0.5">70 kg</p>
+          </div>
+        </div>
 
-        <InfoCard title="Height" value="175 cm" />
-
-        <InfoCard title="Weight" value="70 kg" />
-
-        <InfoCard title="Brand" value="Nike" />
+        <div className="bg-[#24455A]/80 border border-white/5 rounded-2xl p-3.5 flex items-center gap-3 backdrop-blur-md">
+          <FiTag className="text-[#62E0D1] text-[22px]" strokeWidth={1.5} />
+          <div className="flex flex-col">
+            <p className="text-[11px] text-[#87A8BB] font-medium">Brand</p>
+            <p className="text-[15px] font-bold tracking-wide mt-0.5">Nike</p>
+          </div>
+        </div>
 
       </div>
 
-      {/* Bottom */}
-
-      <div className="grid grid-cols-2 gap-5 mt-6">
-
-        <div className="bg-[#254F69] rounded-xl p-4">
-
-          <p className="text-gray-300">
+      {/* Bottom Section */}
+      <div className="bg-[#24455A]/80 border border-white/5 rounded-[20px] p-5 mt-4 flex items-center justify-between relative z-10 backdrop-blur-md">
+        
+        {/* Metric */}
+        <div className="flex flex-col">
+          <p className="text-sm text-[#87A8BB] font-medium tracking-wide">
             Return Reduction
           </p>
-
-          <h3 className="text-3xl font-bold text-[#42E0C8] mt-2">
-            70%
-          </h3>
-
+          <div className="flex items-center gap-2 mt-1">
+            <h3 className="text-[28px] font-bold text-[#42E0C8] leading-none">
+              70%
+            </h3>
+            <FaArrowUp className="text-[#42E0C8] text-[15px] mt-1" />
+          </div>
         </div>
 
-        <div className="bg-[#254F69] rounded-xl flex items-center justify-center">
-
-          <span className="text-cyan-300">
-            Graph
-          </span>
-
+        {/* SVG Graph */}
+        <div className="w-[55%] h-14 relative flex items-end">
+          <svg 
+            viewBox="0 0 100 40" 
+            className="w-full h-full overflow-visible" 
+            preserveAspectRatio="none"
+          >
+            <defs>
+              <linearGradient id="graphGradient" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stopColor="#42E0C8" stopOpacity="0.3" />
+                <stop offset="100%" stopColor="#42E0C8" stopOpacity="0" />
+              </linearGradient>
+            </defs>
+            {/* Filled Area */}
+            <path 
+              d="M0 35 C 10 35, 15 25, 25 30 C 35 35, 40 25, 50 30 C 60 35, 65 25, 75 25 C 85 25, 95 10, 100 5 L 100 40 L 0 40 Z" 
+              fill="url(#graphGradient)" 
+            />
+            {/* Line Path */}
+            <path 
+              d="M0 35 C 10 35, 15 25, 25 30 C 35 35, 40 25, 50 30 C 60 35, 65 25, 75 25 C 85 25, 95 10, 100 5" 
+              fill="none" 
+              stroke="#42E0C8" 
+              strokeWidth="2" 
+              strokeLinecap="round" 
+              strokeLinejoin="round" 
+              className="drop-shadow-[0_0_4px_#42E0C8]"
+            />
+            {/* Glowing Dot at the end */}
+            <circle cx="100" cy="5" r="2.5" fill="#fff" className="drop-shadow-[0_0_5px_#42E0C8]" />
+          </svg>
         </div>
 
       </div>
