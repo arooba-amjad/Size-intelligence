@@ -1,3 +1,4 @@
+import { motion } from "motion/react";
 import Button from "./Button";
 
 const LeftSection = () => {
@@ -6,60 +7,78 @@ const LeftSection = () => {
 
       {/* Badge */}
 
-      <div className="inline-flex items-center gap-2 bg-white text-[#36536B] rounded-full px-5 py-2 text-sm font-medium">
+      <motion.div
+        initial={{ opacity: 0, y: 25 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="inline-flex items-center gap-2 bg-white text-[#36536B] rounded-full px-5 py-2 text-sm font-medium"
+      >
         ✨ Developer-first sizing API
-      </div>
+      </motion.div>
 
       {/* Heading */}
 
-      <h1 className="mt-6 text-[42px] lg:text-[50px] font-bold leading-[1.05]">
-
+      <motion.h1
+        initial={{ opacity: 0, y: 25 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.15 }}
+        className="mt-6 text-[42px] lg:text-[50px] font-bold leading-[1.05]"
+      >
         Size Intelligence API
 
         <br />
 
-        for
+        for{" "}
 
         <span className="text-[#8CC6FF]">
-          {" "}Ecommerce
+          Ecommerce
         </span>
 
-      </h1>
+      </motion.h1>
 
       {/* Description */}
 
-      <p className="mt-6 text-[18px] font-bold  leading-8 max-w-[520px]">
-
+      <motion.p
+        initial={{ opacity: 0, y: 25 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.3 }}
+        className="mt-6 text-[18px] font-bold leading-8 max-w-[520px]"
+      >
         Reduce returns. Improve fit. One API call to recommend
         the perfect clothing size using ML, size charts,
         and brand intelligence.
-
-      </p>
+      </motion.p>
 
       {/* Platforms */}
 
-      <div className="flex flex-wrap gap-3 mt-8 text-xl">
+      <motion.div
+        initial={{ opacity: 0, y: 25 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.45 }}
+        className="flex flex-wrap gap-3 mt-8 text-xl"
+      >
+        <span>Shopify |</span>
 
-        <span>Shopify  |</span>
-       
-        <span>Woo-Commerce  |</span>
+        <span>Woo-Commerce |</span>
 
         <span>Custom Ecommerce</span>
-
-      </div>
+      </motion.div>
 
       {/* Buttons */}
 
-      <div className="mt-8 flex gap-4 flex-wrap">
-
+      <motion.div
+        initial={{ opacity: 0, y: 25 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.6 }}
+        className="mt-8 flex gap-4 flex-wrap"
+      >
         <Button text="Try Demo →" />
 
         <Button
           text="View Documentation"
           variant="secondary"
         />
-
-      </div>
+      </motion.div>
 
     </div>
   );

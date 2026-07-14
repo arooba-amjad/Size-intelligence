@@ -1,6 +1,7 @@
 import CallToAction from "./CallToAction";
 import PricingCard from "./PricingCard";
 
+
 const plans = [
   {
     title: "Free",

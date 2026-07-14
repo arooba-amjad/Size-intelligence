@@ -1,6 +1,7 @@
 import shirtImage from "../../assets/tshirt.png";
 import { FaWeightHanging, FaArrowUp } from "react-icons/fa6";
 import { FiUser, FiTag } from "react-icons/fi";
+import { motion } from "motion/react";
 
 const DashboardCard = () => {
   return (
@@ -28,18 +29,34 @@ const DashboardCard = () => {
             
             {/* Custom Progress Bar */}
             <div className="mt-3 w-[90%] h-2.5 bg-[#122A3A] rounded-full overflow-hidden shadow-inner">
-              <div className="h-full bg-[#42E0C8] rounded-full w-[98%] shadow-[0_0_10px_#42E0C8]"></div>
+              <motion.div
+                className="h-full bg-[#42E0C8] rounded-full shadow-[0_0_10px_#42E0C8]"
+                initial={{ width: 0 }}
+                animate={{ width: "98%" }}
+                transition={{
+                  duration: 1.2,
+                  delay: 0.8,
+                }}
+              />
             </div>
           </div>
         </div>
 
         {/* Right Content - Shirt Image */}
         <div className="absolute -top-4 -right-4 w-[55%] h-[130%] flex justify-end z-0 pointer-events-none">
-          <img 
-            src={shirtImage} 
-            alt="Product Wireframe" 
-            className="w-full h-auto object-contain drop-shadow-2xl mix-blend-screen"
-          />
+            <motion.img
+              src={shirtImage}
+              alt="Product Wireframe"
+              className="w-full h-auto object-contain drop-shadow-2xl mix-blend-screen"
+              animate={{
+                y: [0, -8, 0],
+              }}
+              transition={{
+                duration: 3,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+            />
         </div>
 
       </div>
@@ -103,12 +120,15 @@ const DashboardCard = () => {
               </linearGradient>
             </defs>
             {/* Filled Area */}
-            <path 
+            <motion.path 
               d="M0 35 C 10 35, 15 25, 25 30 C 35 35, 40 25, 50 30 C 60 35, 65 25, 75 25 C 85 25, 95 10, 100 5 L 100 40 L 0 40 Z" 
               fill="url(#graphGradient)" 
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.8, delay: 1.4 }}
             />
             {/* Line Path */}
-            <path 
+            <motion.path 
               d="M0 35 C 10 35, 15 25, 25 30 C 35 35, 40 25, 50 30 C 60 35, 65 25, 75 25 C 85 25, 95 10, 100 5" 
               fill="none" 
               stroke="#42E0C8" 
@@ -116,9 +136,30 @@ const DashboardCard = () => {
               strokeLinecap="round" 
               strokeLinejoin="round" 
               className="drop-shadow-[0_0_4px_#42E0C8]"
+              initial={{ pathLength: 0 }}
+              animate={{ pathLength: 1 }}
+              transition={{ duration: 1.2, delay: 0.6, ease: "easeInOut" }}
             />
             {/* Glowing Dot at the end */}
-            <circle cx="100" cy="5" r="2.5" fill="#fff" className="drop-shadow-[0_0_5px_#42E0C8]" />
+            <motion.circle 
+              cx="100" 
+              cy="5" 
+              r="2.5" 
+              fill="#fff" 
+              className="drop-shadow-[0_0_5px_#42E0C8]"
+              initial={{ scale: 0, opacity: 0 }}
+              animate={{ 
+                scale: [0, 1.4, 1, 1.3, 1], 
+                opacity: 1 
+              }}
+              transition={{ 
+                duration: 1.8, 
+                delay: 1.6, 
+                times: [0, 0.3, 0.5, 0.7, 1],
+                repeat: Infinity,
+                repeatDelay: 2
+              }}
+            />
           </svg>
         </div>
 
