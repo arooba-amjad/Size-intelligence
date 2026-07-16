@@ -1,11 +1,11 @@
 import { motion } from "motion/react";
-import howItWorksImage from "../../assets/how-it-works.png";
+import howItWorksImage from "../../../../assets/how-it-works.png";
 import { IoKeyOutline, IoLockClosedOutline, IoShirtOutline } from "react-icons/io5";
 
 const HowItWorks = () => {
   return (
     <section className="py-20 bg-white">
-      <div className="max-w-[1220px] mx-auto px-6">
+      <div className="max-w-305 mx-auto px-6">
 
         {/* Heading */}
         <motion.h2
@@ -32,12 +32,12 @@ const HowItWorks = () => {
             <img
               src={howItWorksImage}
               alt="How It Works"
-              className="w-full max-w-[500px] transition-all duration-500 hover:scale-105"
+              className="w-full max-w-125 transition-all duration-500 hover:scale-105"
             />
           </motion.div>
 
           {/* Right Timeline */}
-          <div className="w-full lg:w-[45%] relative h-[480px] max-w-[420px] mx-auto lg:mx-0">
+          <div className="w-full lg:w-[45%] relative h-120 max-w-105 mx-auto lg:mx-0">
             
             {/* ================= STEP 1 ================= */}
             <motion.div
@@ -51,7 +51,7 @@ const HowItWorks = () => {
               
               {/* Connector Line to Step 2 */}
               <motion.div
-                className="absolute border-t-[2.5px] border-r-[2.5px] border-[#36536B] rounded-tr-[4px] origin-top-left"
+                className="absolute border-t-[2.5px] border-r-[2.5px] border-[#36536B] rounded-tr-sm origin-top-left"
                 style={{ top: "16px", left: "90px", width: "80px", height: "160px", zIndex: 0 }}
                 initial={{ opacity: 0, pathLength: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
@@ -98,7 +98,7 @@ const HowItWorks = () => {
               
               {/* Connector Line to Step 3 */}
               <motion.div
-                className="absolute border-t-[2.5px] border-r-[2.5px] border-[#36536B] rounded-tr-[4px] origin-top-left"
+                className="absolute border-t-[2.5px] border-r-[2.5px] border-[#36536B] rounded-tr-sm origin-top-left"
                 style={{ top: "16px", left: "90px", width: "80px", height: "160px", zIndex: 0 }}
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}

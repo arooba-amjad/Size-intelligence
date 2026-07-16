@@ -1,6 +1,6 @@
 import { motion } from "motion/react";
-import StatCard from "./StatCard";
-import FeatureCard from "./FeatureCard";
+import StatCard from "../../../ui/StatCard";
+import FeatureCard from "../../../ui/FeatureCard";
 import { FaBrain, FaPlug, FaChartLine } from "react-icons/fa6";
 import { FiRotateCcw, FiUsers } from "react-icons/fi";
 import { BiDollarCircle } from "react-icons/bi";

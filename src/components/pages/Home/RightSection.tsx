@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import DashboardCard from "./DashboardCard";
+import DashboardCard from "../../ui/DashboardCard";
 
 const RightSection = () => {
   return (

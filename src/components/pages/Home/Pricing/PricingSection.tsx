@@ -1,5 +1,5 @@
 import CallToAction from "./CallToAction";
-import PricingCard from "./PricingCard";
+import PricingCard from "../../../ui/PricingCard";
 
 
 const plans = [

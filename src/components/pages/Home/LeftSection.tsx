@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import Button from "./Button";
+import Button from "../../common/button/Button";
 
 const LeftSection = () => {
   return (
@@ -42,7 +42,7 @@ const LeftSection = () => {
         initial={{ opacity: 0, y: 25 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.3 }}
-        className="mt-6 text-[18px] font-bold leading-8 max-w-[520px]"
+        className="mt-6 text-[18px] font-bold leading-8 max-w-130"
       >
         Reduce returns. Improve fit. One API call to recommend
         the perfect clothing size using ML, size charts,
