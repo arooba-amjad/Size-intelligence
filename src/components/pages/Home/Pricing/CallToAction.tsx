@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { motion } from "motion/react";
 
 const CallToAction = () => {
@@ -86,17 +87,19 @@ const CallToAction = () => {
             No credit card required. 1,000 free API calls per day.
           </motion.p>
           
-          <motion.button
-            className="bg-white text-[#355872] font-semibold text-[16px] px-7 py-3.5 rounded-md shadow-[0_4px_14px_0_rgba(0,0,0,0.1)] hover:bg-gray-50"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.5 }}
-            transition={{ duration: 0.6, delay: 0.45, ease: "easeOut" }}
-            whileHover={{ y: -3, boxShadow: "0 6px 20px rgba(0,0,0,0.15)" }}
-            whileTap={{ scale: 0.97 }}
-          >
-            Get your API Key
-          </motion.button>
+          <Link to="/get-api-key">
+            <motion.button
+              className="bg-white text-[#355872] font-semibold text-[16px] px-7 py-3.5 rounded-md shadow-[0_4px_14px_0_rgba(0,0,0,0.1)] hover:bg-gray-50"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.5 }}
+              transition={{ duration: 0.6, delay: 0.45, ease: "easeOut" }}
+              whileHover={{ y: -3, boxShadow: "0 6px 20px rgba(0,0,0,0.15)" }}
+              whileTap={{ scale: 0.97 }}
+            >
+              Get your API Key
+            </motion.button>
+          </Link>
 
         </div>
         
