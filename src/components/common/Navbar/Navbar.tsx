@@ -80,7 +80,7 @@ const Navbar = () => {
 
         {/* CTA */}
 
-        <NavLink to="/docs">
+        <NavLink to="/get-api-key">
 
           <motion.button
             whileHover={{

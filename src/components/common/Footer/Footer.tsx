@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { motion } from "motion/react";
 import { FaPhone, FaGlobe, FaInstagram, FaEnvelope, FaLinkedin } from "react-icons/fa6";
 
@@ -71,10 +72,10 @@ const Footer = () => {
                 Product
               </h4>
               <ul className="space-y-4 text-[15px] font-medium text-[#36536B]">
-                <li><a href="#" className="hover:text-[#6B7C8E] transition-colors">Home</a></li>
+                <li><Link to="/" className="hover:text-[#6B7C8E] transition-colors">Home</Link></li>
                 <li><a href="#" className="hover:text-[#6B7C8E] transition-colors">Demo</a></li>
-                <li><a href="#" className="hover:text-[#6B7C8E] transition-colors">Docs</a></li>
-                <li><a href="#" className="hover:text-[#6B7C8E] transition-colors">API Key</a></li>
+                <li><Link to="/docs" className="hover:text-[#6B7C8E] transition-colors">Docs</Link></li>
+                <li><Link to="/get-api-key" className="hover:text-[#6B7C8E] transition-colors">API Key</Link></li>
               </ul>
             </div>
           </motion.div>

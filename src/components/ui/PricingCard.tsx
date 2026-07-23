@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { motion } from "motion/react";
 import { FaCheck } from "react-icons/fa6";
 
@@ -112,22 +113,24 @@ const PricingCard = ({
 
       {/* Button */}
 
-      <motion.button
-        className={`mt-10 w-full rounded-xl py-3 font-semibold cursor-pointer
-        ${
-          popular
-            ? "bg-[#6D9ED4] text-white hover:bg-[#5A8CC2]"
-            : "border border-[#36536B] text-[#36536B] hover:bg-[#36536B] hover:text-white"
-        }`}
-        initial={{ opacity: 0, y: 10 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.3 }}
-        transition={{ duration: 0.5, delay: 0.4 + features.length * 0.08, ease: "easeOut" }}
-        whileHover={{ scale: 1.03 }}
-        whileTap={{ scale: 0.97 }}
-      >
-        {buttonText}
-      </motion.button>
+      <Link to="/get-api-key" className="mt-10 block">
+        <motion.button
+          className={`w-full rounded-xl py-3 font-semibold cursor-pointer
+          ${
+            popular
+              ? "bg-[#6D9ED4] text-white hover:bg-[#5A8CC2]"
+              : "border border-[#36536B] text-[#36536B] hover:bg-[#36536B] hover:text-white"
+          }`}
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.5, delay: 0.4 + features.length * 0.08, ease: "easeOut" }}
+          whileHover={{ scale: 1.03 }}
+          whileTap={{ scale: 0.97 }}
+        >
+          {buttonText}
+        </motion.button>
+      </Link>
     </motion.div>
   );
 };
