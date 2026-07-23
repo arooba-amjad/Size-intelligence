@@ -4,6 +4,7 @@ import MainLayout from "../components/Layouts/MainLayout";
 
 import Home from "../components/pages/Home/Home";
 import Docs from "../components/pages/Docs/Docs";
+import GetApiKey from "../components/pages/GetApiKey/GetApiKey";
 const router = createBrowserRouter(
   [
     {
