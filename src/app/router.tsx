@@ -1,11 +1,9 @@
 import { createBrowserRouter } from "react-router-dom";
 
-import MainLayout from "./Layouts/MainLayout";
+import MainLayout from "../components/Layouts/MainLayout";
 
-import Home from "./components/pages/Home/Home";
-import Docs from "./components/pages/Docs/Docs";
-import GetApiKey from "./components/pages/GetApiKey/GetApiKey";
-
+import Home from "../components/pages/Home/Home";
+import Docs from "../components/pages/Docs/Docs";
 const router = createBrowserRouter(
   [
     {
