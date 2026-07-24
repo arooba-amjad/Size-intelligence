@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import Button from "../../common/button/Button";
+import Button from "../../components/common/button/Button";
 
 const LeftSection = () => {
   return (

@@ -1,5 +1,5 @@
 import React from "react";
-import docshero from "../../../../assets/docshero.jpeg"; 
+import docshero from "../../../assets/docshero.jpeg"; 
 
 const DocsHero: React.FC = () => {
   return (

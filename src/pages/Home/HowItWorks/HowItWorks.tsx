@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import howItWorksImage from "../../../../assets/how-it-works.png";
+import howItWorksImage from "../../../assets/how-it-works.png";
 import { IoKeyOutline, IoLockClosedOutline, IoShirtOutline } from "react-icons/io5";
 
 const HowItWorks = () => {

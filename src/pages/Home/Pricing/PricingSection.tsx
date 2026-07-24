@@ -1,5 +1,5 @@
 import CallToAction from "./CallToAction";
-import PricingCard from "../../../ui/PricingCard";
+import PricingCard from "../../../components/ui/PricingCard";
 
 
 const plans = [
@@ -53,7 +53,7 @@ const PricingSection = () => {
   return (
     <section className="py-15 bg-white">
 
-      <div className="max-w-[1220px] mx-auto px-6">
+      <div className="max-w-305 mx-auto px-6">
 
         <h2 className="text-5xl font-bold text-center text-[#36536B]">
           Simple pricing

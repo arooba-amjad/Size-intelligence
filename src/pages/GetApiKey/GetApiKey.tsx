@@ -16,7 +16,7 @@ import {
   FiArrowLeft,
 } from "react-icons/fi";
 import { HiOutlineShoppingBag } from "react-icons/hi2";
-import backgroundImage from "../../../assets/get-api-key-bg.png";
+import backgroundImage from "../../assets/get-api-key-bg.png";
 
 type Step = 1 | 2 | 3;
 
@@ -225,7 +225,7 @@ const GetApiKey = () => {
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.55, ease: "easeOut" }}
-            className="relative w-full max-w-[560px] overflow-hidden rounded-[36px]"
+            className="relative w-full max-w-140 overflow-hidden rounded-[36px]"
             style={{
               background:
                 "linear-gradient(145deg, rgba(255,255,255,0.28) 0%, rgba(180,200,215,0.12) 40%, rgba(255,255,255,0.08) 100%)",
@@ -255,9 +255,9 @@ const GetApiKey = () => {
             {/* Form body */}
             <div className="relative z-10 px-5 py-7 sm:px-7 sm:py-8">
               {/* Absolute step rail — ends at Show passwords, not past the button */}
-              <div className="pointer-events-none absolute left-5 top-7 h-[268px] w-12 sm:left-6 sm:h-[280px] sm:w-14">
+              <div className="pointer-events-none absolute left-5 top-7 h-67 w-12 sm:left-6 sm:h-70 sm:w-14">
                 <div
-                  className="absolute left-[5px] top-6 bottom-0 w-px bg-gradient-to-b from-white via-white/65 to-white/40"
+                  className="absolute left-1.25 top-6 bottom-0 w-px bg-gradient-to-b from-white via-white/65 to-white/40"
                   aria-hidden
                 />
                 <span
